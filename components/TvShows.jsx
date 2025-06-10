@@ -1,15 +1,21 @@
-import { Text, View, Button } from "react-native";
+import { Text, View, Image, StyleSheet } from "react-native";
 
-export default function TvShows({tvShowData}){
-    //ADD IMAGE IN PROPS
+const styles ={
+    imageSize:{
+        width: 265,
+        height: 350
+        }
+    }
+
+export default function TvShows({tvShowData, image}){
     return (
             <>
-{/*             <image source={image}/> */}
+                <Image source={image} style={styles.imageSize}/>
                 <Text>Tile: {tvShowData.title}</Text>
                 <Text>Summary: {tvShowData.summary}</Text>
                 <Text>Aired: {tvShowData.yearsAired}</Text>
                 {
-                   tvShowData.genres.map( (genre) => <Text key={genres}>{genre} </Text> )
+                   tvShowData.genres.map((genre) => <Text key={genre}>{genre} </Text> )
                 }
             </>
         )
