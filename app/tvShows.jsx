@@ -1,8 +1,8 @@
 import { Text, View, Button, Image, StyleSheet } from "react-native";
-import { useState } from "react"
+import { useState, useContext } from "react"
 import {useRouter} from "expo-router";
 import TvShows from "../components/TvShow.jsx"
-import tvShowData from "../assets/tvShows.json"
+import {TvShowContext} from "../components/TvShowContext.jsx"
 
 const StrangerThingsImage = require("../assets/images/StrangerThings.jpg");
 const BojackImage = require("../assets/images/Bojack.jpg");
@@ -43,6 +43,7 @@ function GetButtons({index, setIndex}){
 export default function Index() {
   const  [index, setIndex] = useState(0);
   const router = useRouter();
+  const {tvShowData} = useContext(TvShowContext)
   return (
     <View
       style={{

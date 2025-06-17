@@ -11,7 +11,6 @@ export default function Index() {
         alignItems: "center"
       }}>
 
-     <Text>Hi this is a test</Text>
      <Button onPress={() => router.navigate('/tvShows')} title="Tv shows"></Button>
     </View>
   );
