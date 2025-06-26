@@ -8,7 +8,7 @@ const StrangerThingsImage = require("../assets/images/StrangerThings.jpg");
 const BojackImage = require("../assets/images/Bojack.jpg");
 const OfficeImage = require("../assets/images/Office.jpg");
 
-const images = [StrangerThingsImage, OfficeImage, BojackImage];
+const images = {"StrangerThingsImg": StrangerThingsImage, "OfficeImg": OfficeImage, "BojackImg": BojackImage}
 
 function GetButtons({index, setIndex}){
     if(index == 0){
@@ -52,7 +52,7 @@ export default function Index() {
         alignItems: "center"
       }}>
 
-     <TvShows tvShowData={tvShowData[index]} image={images[index]}/>
+    <TvShows tvShowData={tvShowData[index]} image={images[tvShowData[index].image]} />
      <GetButtons index={index} setIndex={setIndex}/>
     </View>
   );

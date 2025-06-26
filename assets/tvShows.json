@@ -1,5 +1,5 @@
 [
-  {"title": "Stranger Things", "genres": ["Sci-fi", "Mystery", "Horror"], "yearsAired": "2016-2025", "summary" : "A group of teens try to unravel an interdimensional mystery in their quiet town of Hawkins Indiana"},
-  {"title": "The Office", "genres": ["Mockumentary", "Comedy"], "yearsAired": "2005-2013", "summary" : "Follows the lives ahd misadventures of the employees at a Pennsylvania paper company, Dunder Mifflin"},
-  {"title": "Bojack Horseman", "genres": ["Animation", "Drama", "Comedy"], "yearsAired": "2014-2020", "summary" : "Washed up 90's star Bojack Horseman tries to find his way to fame again amongst personal issues and hardships."}
+  {"title": "Stranger Things", "genres": ["Sci-fi", "Mystery", "Horror"], "yearsAired": "2016-2025", "summary" : "A group of teens try to unravel an interdimensional mystery in their quiet town of Hawkins Indiana", "image": "StrangerThingsImg"},
+  {"title": "The Office", "genres": ["Mockumentary", "Comedy"], "yearsAired": "2005-2013", "summary" : "Follows the lives ahd misadventures of the employees at a Pennsylvania paper company, Dunder Mifflin", "image": "OfficeImg"},
+  {"title": "Bojack Horseman", "genres": ["Animation", "Drama", "Comedy"], "yearsAired": "2014-2020", "summary" : "Washed up 90's star Bojack Horseman tries to find his way to fame again amongst personal issues and hardships.", "image": "BojackImg"}
 ]
