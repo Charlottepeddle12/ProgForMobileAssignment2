@@ -1,11 +1,10 @@
 import { Text, TextInput, Button } from 'react-native';
 import { useState } from 'react';
-import { useContext } from 'react';
+import { useContext} from 'react';
 import { TvShowContext } from '../components/TvShowContext';
 import {Picker} from '@react-native-picker/picker';
 
-export default function UpdateMovies() {
-
+export default function UpdateTvShows() {
 
     const [currentTvShow, setCurrentTvShow] = useState(0)
     const { tvShowData, setTvShowData } = useContext(TvShowContext);
@@ -39,6 +38,7 @@ export default function UpdateMovies() {
         setGenres(tvShowData[index].genres);
         setYearsAired(tvShowData[index].yearsAired);
         setSummary(tvShowData[index].summary);
+        setPoster(tvShowData[index].image)
         setCurrentTvShow(index);
     }
 
@@ -59,17 +59,17 @@ export default function UpdateMovies() {
 
             //TODO: FIX SO YOU CAN SELECT A POSTER. LOOK AT https://github.com/EricStockTeacher/EricsMovies/commit/96c6d11963dfea5293966256ff68736c08eb52f7
              <Picker
-                  selectedValue={currentTvShow}
+                  selectedValue={poster}
                   onValueChange={(itemValue, itemIndex) =>
-                    changePoster(itemIndex)
+                    setPoster(itemValue)
                   }>
-                  <Picker.Item label="Stranger Things Season 1" value="" />
-                  <Picker.Item label="Stranger Things Season 4" value="" />
-                  <Picker.Item label="The Office 1" value="" />
-                  <Picker.item label="The Office 2" value=""/>
-                  <Picker.item label="Bojack Horseman 1" value=""/>
-                  <Picker.item label="Bojack Horseman 2" value=""/>
-                </Picker>
+                  <Picker.Item label="Stranger Things Season 1 poster" value="StrangerThingsImg1" />
+                  <Picker.Item label="Stranger Things Season 4 poster" value="StrangerThingsImg2" />
+                  <Picker.Item label="The Office poster 1" value="OfficeImg1" />
+                  <Picker.item label="The Office poster 2" value="OfficeImg2"/>
+                  <Picker.item label="Bojack Horseman poster 1" value="BojackImg1"/>
+                  <Picker.item label="Bojack Horseman poster 2" value="BojackImg2"/>
+            </Picker>
 
             <Text>Title</Text>
             <TextInput value={title.toString()} onChangeText={setTitle}/>

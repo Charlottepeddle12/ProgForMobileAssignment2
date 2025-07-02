@@ -1,14 +1,18 @@
 import { Text, View, Button, Image, StyleSheet } from "react-native";
-import { useState, useContext } from "react"
+import { useState} from "react"
+import { useContext} from "react"
 import {useRouter} from "expo-router";
 import TvShows from "../components/TvShow.jsx"
 import {TvShowContext} from "../components/TvShowContext.jsx"
 
-const StrangerThingsImage = require("../assets/images/StrangerThings.jpg");
-const BojackImage = require("../assets/images/Bojack.jpg");
-const OfficeImage = require("../assets/images/Office.jpg");
+const StrangerThingsImage1 = require("../assets/images/StrangerThings.jpg");
+const BojackImage1 = require("../assets/images/Bojack.jpg");
+const OfficeImage1 = require("../assets/images/Office.jpg");
+const StrangerThingsImage2 = require("../assets/images/StrangerThings4.jpg");
+const BojackImage2 = require("../assets/images/Bojack2.jpg");
+const OfficeImage2 = require("../assets/images/Office2.jpg");
 
-const images = {"StrangerThingsImg": StrangerThingsImage, "OfficeImg": OfficeImage, "BojackImg": BojackImage}
+const images = {"StrangerThingsImg1": StrangerThingsImage1, "OfficeImg1": OfficeImage1, "BojackImg1": BojackImage1, "StrangerThingsImg2": StrangerThingsImage2, "OfficeImg2": OfficeImage2, "BojackImg2": BojackImage2}
 
 function GetButtons({index, setIndex}){
     if(index == 0){
